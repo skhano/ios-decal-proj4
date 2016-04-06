@@ -2,8 +2,11 @@
 ## Authors
 * Eva Zhang
 * Sam Khano
+
 ## Purpose
-Raw Text: It will be easy for housemates to distribute tasks amongst one another and keep track of the cost of household items. 
+
+It will be easy for housemates to distribute tasks amongst one another and keep track of the cost of household items. 
+
 ## Features
 * We will have a point system that keeps track of each person's completed tasks(total score), and will use that to determine your next task("harder" tasks will be given to people with lower scores)
 
