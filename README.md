@@ -41,7 +41,7 @@ It will be easy for housemates to distribute tasks amongst one another and keep 
 
 ### Controller
 
-PersonProfileTableViewController(name, balance, score, tasks)
+* PersonProfileTableViewController(name, balance, score, tasks)
 * Calender.... (all tasks)
 * TaskTableViewController (has name and person and day of the week and frequency)
 * PurcasedItemsTableViewController
