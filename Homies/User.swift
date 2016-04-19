@@ -14,7 +14,7 @@ class User : NSObject {
     var userHouse : House!
     
     var score : Int!
-    var tasks : [String]!
+    var tasks : [Task]!
     var itemsBought : [String : Double]
     var moneySpent : Double!
     
@@ -24,7 +24,7 @@ class User : NSObject {
         moneySpent = 0.0
     }
     
-    init(enteredName : String, enteredPassword : String, enteredHouse : House, enteredTasks : [String]) {
+    init(enteredName : String, enteredPassword : String, enteredHouse : House) {
         super.init()
         score = 0
         tasks = []
@@ -32,7 +32,7 @@ class User : NSObject {
         userName = enteredName
         userPassword = enteredPassword
         userHouse = enteredHouse
-        tasks = enteredTasks
+       // tasks = enteredTasks
         itemsBought = [String : Double]()
     }
     
@@ -51,6 +51,18 @@ class User : NSObject {
         itemsBought[item] = cost
         moneySpent = moneySpent + cost
         score = score + 1
+    }
+    
+    func addTask(newTask: Task) {
+        tasks.append(newTask)
+    }
+    
+    func clearTasks() {
+        tasks.removeAll()
+    }
+    
+    func addWantedItem(wantedItem: String) {
+        userHouse.neededItems.append(wantedItem)
     }
     
 }

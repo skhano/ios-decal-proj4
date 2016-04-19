@@ -8,6 +8,8 @@
 
 import UIKit
 
-class ExecutiveUser: UserProfile {
-    func addTask()
+class ExecutiveUser: User {
+    func addNewTask(newTask: Task) {
+        userHouse.tasks.append(newTask)
+    }
 }

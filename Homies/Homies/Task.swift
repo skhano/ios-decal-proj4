@@ -16,7 +16,6 @@ class Task : NSObject {
     init(eTaskName : String, eFrequency : String, eCreatedDate : NSDate, eStartOffset : Int) {
         taskName = eTaskName
         frequency = eFrequency
-        createdDate = eCreatedDate
         startOffset = eStartOffset
     }
 

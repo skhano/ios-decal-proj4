@@ -14,6 +14,12 @@ class House: NSObject {
     var users : [User]!
     var neededItems : [String]!
     var createdDate : NSDate!
-    var task 
+    var tasks :[Task]!
+    
+    init(eHouseName: String, eExec: ExecutiveUser, eCreatedDate: NSDate) {
+        houseName = eHouseName
+        exec = eExec
+        createdDate = eCreatedDate
+    }
     
 }

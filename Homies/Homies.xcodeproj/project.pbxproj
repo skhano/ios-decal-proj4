@@ -67,11 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				64DEA0F71CC5DD1C00787C84 /* ExecutiveUser.swift */,
+				64DEA0F31CC5D60B00787C84 /* User.swift */,
 				64DEA0F91CC5DD9100787C84 /* Task.swift */,
 				64DEA0F51CC5DCF100787C84 /* House.swift */,
 				64DEA0DB1CC5C87400787C84 /* AppDelegate.swift */,
 				64DEA0DD1CC5C87400787C84 /* LoginViewController.swift */,
-				64DEA0F31CC5D60B00787C84 /* User.swift */,
 				64DEA0ED1CC5CEB100787C84 /* RegisterUserViewController.swift */,
 				64DEA0EF1CC5CEE600787C84 /* RegisterHouseViewController.swift */,
 				64DEA0DF1CC5C87400787C84 /* Main.storyboard */,
@@ -308,6 +308,7 @@
 				64DEA0EC1CC5C87400787C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
