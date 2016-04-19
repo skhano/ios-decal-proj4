@@ -18,14 +18,14 @@ class User : NSObject {
     var itemsBought : [String : Double]
     var moneySpent : Double!
     
-    override init () {
-        score = 0
-        tasks = []
-        moneySpent = 0.0
-    }
+//    override init () {
+//        score = 0
+//        tasks = []
+//        moneySpent = 0.0
+//    }
     
     init(enteredName : String, enteredPassword : String, enteredHouse : House) {
-        super.init()
+//        super.init()
         score = 0
         tasks = []
         moneySpent = 0
@@ -53,6 +53,18 @@ class User : NSObject {
         score = score + 1
     }
     
+    func calMoneySpent() -> Double {
+        moneySpent = 0
+        for (_,value) in itemsBought {
+            moneySpent! += value
+        }
+        return moneySpent
+    }
+    
+    func addWantedItem(wantedItem: String) {
+        userHouse.neededItems.append(wantedItem)
+    }
+    
     func addTask(newTask: Task) {
         tasks.append(newTask)
     }
@@ -61,8 +73,22 @@ class User : NSObject {
         tasks.removeAll()
     }
     
-    func addWantedItem(wantedItem: String) {
-        userHouse.neededItems.append(wantedItem)
+    func clearBoughtItems() {
+        itemsBought.removeAll()
+    }
+
+    func clearScore() {
+        score = 0
     }
     
+    func clearMoneySpent() {
+        moneySpent = 0
+    }
+    
+    func clearAll() {
+        clearTasks()
+        clearBoughtItems()
+        clearScore()
+        clearMoneySpent()
+    }
 }

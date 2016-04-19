@@ -18,6 +18,7 @@
 		64DEA0F61CC5DCF100787C84 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA0F51CC5DCF100787C84 /* House.swift */; };
 		64DEA0F81CC5DD1C00787C84 /* ExecutiveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA0F71CC5DD1C00787C84 /* ExecutiveUser.swift */; };
 		64DEA0FA1CC5DD9100787C84 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA0F91CC5DD9100787C84 /* Task.swift */; };
+		A6AD73C81CC5FCA700B56D9B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD73C71CC5FCA700B56D9B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		64DEA0F51CC5DCF100787C84 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = House.swift; path = ../House.swift; sourceTree = "<group>"; };
 		64DEA0F71CC5DD1C00787C84 /* ExecutiveUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExecutiveUser.swift; path = ../ExecutiveUser.swift; sourceTree = "<group>"; };
 		64DEA0F91CC5DD9100787C84 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A6AD73C71CC5FCA700B56D9B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				64DEA0F51CC5DCF100787C84 /* House.swift */,
 				64DEA0DB1CC5C87400787C84 /* AppDelegate.swift */,
 				64DEA0DD1CC5C87400787C84 /* LoginViewController.swift */,
+				A6AD73C71CC5FCA700B56D9B /* MainViewController.swift */,
 				64DEA0ED1CC5CEB100787C84 /* RegisterUserViewController.swift */,
 				64DEA0EF1CC5CEE600787C84 /* RegisterHouseViewController.swift */,
 				64DEA0DF1CC5C87400787C84 /* Main.storyboard */,
@@ -159,6 +162,7 @@
 				64DEA0F41CC5D60B00787C84 /* User.swift in Sources */,
 				64DEA0DE1CC5C87400787C84 /* LoginViewController.swift in Sources */,
 				64DEA0F81CC5DD1C00787C84 /* ExecutiveUser.swift in Sources */,
+				A6AD73C81CC5FCA700B56D9B /* MainViewController.swift in Sources */,
 				64DEA0F61CC5DCF100787C84 /* House.swift in Sources */,
 				64DEA0DC1CC5C87400787C84 /* AppDelegate.swift in Sources */,
 			);
