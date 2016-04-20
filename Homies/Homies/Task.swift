@@ -12,11 +12,13 @@ class Task : NSObject {
     var taskName : String!
     var frequency : String!
     var startOffset : Int!
+    var completed : Bool!
     
     init(eTaskName : String, eFrequency : String, eCreatedDate : NSDate, eStartOffset : Int) {
         taskName = eTaskName
         frequency = eFrequency
         startOffset = eStartOffset
+        completed = false
     }
 
 }

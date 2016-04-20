@@ -10,6 +10,16 @@ import UIKit
 
 class RegisterHouseViewController: UIViewController {
 
+    @IBOutlet weak var enteredHouseName: UITextField!
+    @IBOutlet weak var enteredHouseExecutive: UITextField!
+    @IBOutlet weak var enteredPassword: UITextField!
+    
+    @IBAction func registerButton(sender: AnyObject) {
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
