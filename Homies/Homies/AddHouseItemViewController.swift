@@ -10,23 +10,25 @@ import UIKit
 
 class AddHouseItemViewController: UIViewController {
     
-      var neededItem : Int!
+    var neededItem : Int!
     
-//    @IBOutlet weak var userInput: UITextField!
-//    
-//    @IBOutlet weak var saveButton: UIButton!
-//    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var enteredItem: UITextField!
+    @IBOutlet weak var priceLabel: UILabel!
     
     
 //  var delegate : ModelDelegate?
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        statusLabel.text = "Enter a task"
-//        saveButton.setTitle("Save", forState: UIControlState.Normal)
-//    }
-//    
-//    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if (neededItem == 0) {
+            priceLabel.text = ""
+        } else {
+            priceLabel.text = "Enter Price"
+        }
+        //saveButton.setTitle("Save", forState: UIControlState.Normal)
+    }
+    
+    
 //    @IBAction func DoneButton(sender: UIBarButtonItem) {
 //        if let text = userInput.text {
 //            if (text != "") {

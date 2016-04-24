@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6408CEE81CCD7C4900DA1B8C /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408CEE71CCD7C4900DA1B8C /* AddTaskViewController.swift */; };
+		6408CEEA1CCD7C5100DA1B8C /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408CEE91CCD7C5100DA1B8C /* GarbageViewController.swift */; };
+		6408CEEC1CCD7C5800DA1B8C /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408CEEB1CCD7C5800DA1B8C /* ProfileTableViewController.swift */; };
+		6408CEEE1CCD7C5D00DA1B8C /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408CEED1CCD7C5D00DA1B8C /* StatsTableViewController.swift */; };
 		645896281CC7308900458AED /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645896271CC7308900458AED /* TasksTableViewController.swift */; };
 		6458962A1CC7332A00458AED /* HouseItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645896291CC7332A00458AED /* HouseItemsTableViewController.swift */; };
 		6458962C1CC743D400458AED /* AddHouseItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458962B1CC743D400458AED /* AddHouseItemViewController.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6408CEE71CCD7C4900DA1B8C /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		6408CEE91CCD7C5100DA1B8C /* GarbageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
+		6408CEEB1CCD7C5800DA1B8C /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		6408CEED1CCD7C5D00DA1B8C /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
 		645896271CC7308900458AED /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		645896291CC7332A00458AED /* HouseItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseItemsTableViewController.swift; sourceTree = "<group>"; };
 		6458962B1CC743D400458AED /* AddHouseItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouseItemViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 				645896291CC7332A00458AED /* HouseItemsTableViewController.swift */,
 				6458962B1CC743D400458AED /* AddHouseItemViewController.swift */,
 				645896271CC7308900458AED /* TasksTableViewController.swift */,
+				6408CEED1CCD7C5D00DA1B8C /* StatsTableViewController.swift */,
+				6408CEEB1CCD7C5800DA1B8C /* ProfileTableViewController.swift */,
+				6408CEE91CCD7C5100DA1B8C /* GarbageViewController.swift */,
+				6408CEE71CCD7C4900DA1B8C /* AddTaskViewController.swift */,
 				64DEA0DF1CC5C87400787C84 /* Main.storyboard */,
 				64DEA0E21CC5C87400787C84 /* Assets.xcassets */,
 				64DEA0E41CC5C87400787C84 /* LaunchScreen.storyboard */,
@@ -171,12 +183,16 @@
 				64DEA0F41CC5D60B00787C84 /* User.swift in Sources */,
 				6458962A1CC7332A00458AED /* HouseItemsTableViewController.swift in Sources */,
 				64DEA0DE1CC5C87400787C84 /* LoginViewController.swift in Sources */,
+				6408CEEC1CCD7C5800DA1B8C /* ProfileTableViewController.swift in Sources */,
 				64DEA0F81CC5DD1C00787C84 /* ExecutiveUser.swift in Sources */,
 				645896281CC7308900458AED /* TasksTableViewController.swift in Sources */,
+				6408CEEA1CCD7C5100DA1B8C /* GarbageViewController.swift in Sources */,
 				6458962C1CC743D400458AED /* AddHouseItemViewController.swift in Sources */,
 				A6AD73C81CC5FCA700B56D9B /* MainViewController.swift in Sources */,
 				64DEA0F61CC5DCF100787C84 /* House.swift in Sources */,
 				64DEA0DC1CC5C87400787C84 /* AppDelegate.swift in Sources */,
+				6408CEE81CCD7C4900DA1B8C /* AddTaskViewController.swift in Sources */,
+				6408CEEE1CCD7C5D00DA1B8C /* StatsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

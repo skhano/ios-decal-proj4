@@ -60,6 +60,10 @@ class User : NSObject {
         return moneySpent
     }
     
+    func changeScore(val : Int) {
+        score = score + val
+    }
+    
     func addWantedItem(wantedItem: String) {
         userHouse.neededItems.append(wantedItem)
     }
