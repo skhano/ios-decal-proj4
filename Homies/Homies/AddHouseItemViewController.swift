@@ -9,7 +9,8 @@
 import UIKit
 
 class AddHouseItemViewController: UIViewController {
-
+    
+      var neededItem : Int!
     
 //    @IBOutlet weak var userInput: UITextField!
 //    

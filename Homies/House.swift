@@ -16,10 +16,16 @@ class House: NSObject {
     var createdDate : NSDate!
     var tasks :[Task]!
     
-    init(eHouseName: String, eExec: ExecutiveUser, eCreatedDate: NSDate) {
+    init(eHouseName: String, eCreatedDate: NSDate) {
         houseName = eHouseName
-        exec = eExec
         createdDate = eCreatedDate
+    }
+    
+    func addUser(user : User) {
+        users.append(user)
+        if let houseUser = user as? ExecutiveUser {
+            exec = houseUser
+        }
     }
     
 }
