@@ -18,22 +18,21 @@ class User : NSObject {
     var itemsBought : [String : Double]
     var moneySpent : Double!
     
-//    override init () {
-//        score = 0
-//        tasks = []
-//        moneySpent = 0.0
-//    }
-    
-    init(enteredName : String, enteredPassword : String, enteredHouse : House) {
-//        super.init()
+    override init () {
         score = 0
         tasks = []
-        moneySpent = 0
+        itemsBought = [String : Double]()
+        moneySpent = 0.0
+    }
+    
+    init(enteredName : String, enteredPassword : String, enteredHouse : House) {
+        score = 0
+        tasks = []
+        itemsBought = [String : Double]()
+        moneySpent = 0.0
         userName = enteredName
         userPassword = enteredPassword
         userHouse = enteredHouse
-       // tasks = enteredTasks
-        itemsBought = [String : Double]()
     }
     
     func boughtItem(item : String, cost : Double) {

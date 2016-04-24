@@ -12,4 +12,7 @@ class ExecutiveUser: User {
     func addNewTask(newTask: Task) {
         userHouse.tasks.append(newTask)
     }
+    func checkOffTask(task : Task) {
+        //add check mark to table cell
+    }
 }
