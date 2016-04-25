@@ -45,7 +45,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9z-gP-xf3"/>
-                                    <segue destination="q27-zw-R2Q" kind="presentation" id="3uJ-xw-Ra6"/>
+                                    <segue destination="q27-zw-R2Q" kind="presentation" identifier="houseSegue" id="3uJ-xw-Ra6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leV-VZ-hz4">
@@ -229,17 +229,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <segmentedControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="ThV-mS-SlQ">
-                            <rect key="frame" x="0.0" y="136" width="600" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Week"/>
-                                <segment title="Month"/>
-                            </segments>
-                            <connections>
-                                <action selector="changedTab:" destination="ROQ-53-vB4" eventType="valueChanged" id="Zsy-nk-byf"/>
-                            </connections>
-                        </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LCb-gg-CDb">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
@@ -255,7 +244,20 @@
                             <outlet property="delegate" destination="ROQ-53-vB4" id="OrJ-sF-4CR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dF2-1M-RvI"/>
+                    <navigationItem key="navigationItem" id="dF2-1M-RvI">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="ThV-mS-SlQ">
+                            <rect key="frame" x="20" y="7" width="560" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Week"/>
+                                <segment title="Month"/>
+                            </segments>
+                            <connections>
+                                <action selector="changedTab:" destination="ROQ-53-vB4" eventType="valueChanged" id="Zsy-nk-byf"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="tabController" destination="ThV-mS-SlQ" id="iy2-gt-neP"/>
                     </connections>
@@ -264,31 +266,20 @@
             </objects>
             <point key="canvasLocation" x="4100" y="41"/>
         </scene>
-        <!--House Hold Items-->
+        <!--House Items Table View Controller-->
         <scene sceneID="LZw-TE-n9w">
             <objects>
                 <tableViewController id="bBo-Rz-jbi" customClass="HouseItemsTableViewController" customModule="Homies" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nvR-7r-mYR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" id="nvR-7r-mYR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <segmentedControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Tu3-KJ-nhx">
-                            <rect key="frame" x="0.0" y="136" width="600" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Needed Items"/>
-                                <segment title="Purchased Items"/>
-                            </segments>
-                            <connections>
-                                <action selector="itemsTabChanged:" destination="bBo-Rz-jbi" eventType="valueChanged" id="f01-yi-2Ns"/>
-                            </connections>
-                        </segmentedControl>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6pX-sq-t4p">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="houseHoldItemCell" rowHeight="53" id="6pX-sq-t4p">
+                                <rect key="frame" x="0.0" y="92" width="600" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6pX-sq-t4p" id="nWF-qV-wji">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -298,7 +289,19 @@
                             <outlet property="delegate" destination="bBo-Rz-jbi" id="UxO-wi-Pt1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="House Hold Items" id="noo-36-l9S">
+                    <navigationItem key="navigationItem" id="noo-36-l9S">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Tu3-KJ-nhx">
+                            <rect key="frame" x="20" y="7" width="526" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Needed Items"/>
+                                <segment title="Purchased Items"/>
+                            </segments>
+                            <connections>
+                                <action selector="itemsTabChanged:" destination="bBo-Rz-jbi" eventType="valueChanged" id="f01-yi-2Ns"/>
+                            </connections>
+                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="U9B-3d-YaG">
                             <connections>
                                 <segue destination="0P9-py-UIZ" kind="show" identifier="addHouseItemSegue" id="Rf4-KP-Bmk"/>

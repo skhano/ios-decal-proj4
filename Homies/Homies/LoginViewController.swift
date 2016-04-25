@@ -8,10 +8,15 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+protocol LoginDelegate {
+    func getCurrentUser() -> User
+}
+
+class LoginViewController: UIViewController, LoginDelegate {
 
     var users : [User]!
     var houses : [House]!
+    var currentUser : User!
 
     @IBOutlet weak var enteredUserName: UITextField!
     @IBOutlet weak var enteredPassword: UITextField!
@@ -21,6 +26,7 @@ class LoginViewController: UIViewController {
         for usr in users {
             if usr.userName == enteredUserName.text && usr.userPassword == enteredPassword.text {
                 validEntry = true
+                currentUser = usr
             }
         }
         if !(validEntry) {
@@ -37,6 +43,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         houses = [House.init(eHouseName: "berkeleyhome", eCreatedDate: NSDate())]
         users = [ExecutiveUser.init(enteredName: "eva", enteredPassword: "eva", enteredHouse: houses[0]), User.init(enteredName: "sam", enteredPassword: "sam", enteredHouse: houses[0]), User.init(enteredName: "mike", enteredPassword: "mike", enteredHouse: houses[0]), User.init(enteredName: "jane", enteredPassword: "jane", enteredHouse: houses[0]), User.init(enteredName: "bob", enteredPassword: "bob", enteredHouse: houses[0])]
+        houses[0].addUser(users[0])
+        houses[0].addUser(users[1])
+        houses[0].addUser(users[2])
+        houses[0].addUser(users[3])
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -44,7 +55,23 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func getCurrentUser() -> User {
+        return currentUser
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "houseSegue") {
+            let barViewControllers = segue.destinationViewController as! UITabBarController
+            let nav = barViewControllers.viewControllers![1] as! UINavigationController
+            let vc = nav.topViewController as! HouseItemsTableViewController
+            vc.delegate = self
+        }
+//        if (segue.identifier == "DailyStats") {
+//            let nav = segue.destinationViewController as! UINavigationController
+//            let vc = nav.viewControllers.first as! DailyStatsViewController
+//            vc.delegate = self
+//        }
+    }
 }
 
