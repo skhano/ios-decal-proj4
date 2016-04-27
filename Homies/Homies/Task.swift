@@ -10,16 +10,42 @@ import UIKit
 
 class Task : NSObject {
     var taskName : String!
-    var frequency : String!
-    var startOffset : Int!
+    var frequency : NSTimeInterval!
     var completed : Bool!
-    var CreatedDate : NSDate!
+    var createdDate : NSDate!
+    var deadline: NSDate!
+//    var startOffset: NSTimeInterval!
+    var assignedUser: User!
 
-    init(eTaskName : String, eFrequency : String, eCreatedDate : NSDate, eStartOffset : Int) {
+    init(eTaskName : String, eFrequency : NSTimeInterval, eCreatedDate : NSDate, eDeadline : NSDate) {
         taskName = eTaskName
         frequency = eFrequency
-        startOffset = eStartOffset
-        CreatedDate = eCreatedDate
+        createdDate = eCreatedDate
         completed = false
+        assignedUser = nil
+        deadline = eDeadline
+        //startOffset = eStartOffset
     }
+
+    func complete() {
+        completed = true
+    }
+    
+    func updateDeadline() {
+        deadline = deadline.dateByAddingTimeInterval(frequency)
+    }
+    
+    func assignUser(user: User) {
+        assignedUser = user
+    }
+    
+    //NSDate(timeInterval: frequency, sinceDate: deadline)
+    
+    func copyTask() -> Task {
+        return Task.init(eTaskName: taskName, eFrequency: frequency, eCreatedDate: createdDate, eDeadline : deadline)
+    }
+
+//    func reset() {
+//        completed = false
+//    }
 }
