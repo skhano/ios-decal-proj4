@@ -19,7 +19,7 @@ class StatsTableViewController: UITableViewController {
         
         user = delegate?.getCurrentUser()
         house = user.userHouse
-        
+        print("\(user.userName)")
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -27,4 +27,17 @@ class StatsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style:  UITableViewCellStyle.Value1, reuseIdentifier: "statCell")
+        cell.textLabel?.text = "afjkldsklfdsaklfkdlsf"
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    
+    
 }
