@@ -19,7 +19,6 @@ class StatsTableViewController: UITableViewController {
         
         user = delegate?.getCurrentUser()
         house = user.userHouse
-        print("\(user.userName)")
         // Do any additional setup after loading the view, typically from a nib.
     }
     

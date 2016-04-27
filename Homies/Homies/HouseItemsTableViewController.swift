@@ -25,21 +25,21 @@ class HouseItemsTableViewController: UITableViewController {
         user = delegate?.getCurrentUser()
         houseObj = user.userHouse
         
-        user.addWantedItem("Toilet Paper")
-        user.addWantedItem("hello")
-        user.addWantedItem("ToilePaper")
-        user.addWantedItem("he")
-        user.addWantedItem("Toilet Papr")
-        user.addWantedItem("ello")
-        user.addWantedItem("ilePaper")
-        user.addWantedItem("e")
-        user.addWantedItem("aper")
-        user.addWantedItem("o")
-        user.addWantedItem("lePaper")
-        user.addWantedItem("dae")
-        
-        user.boughtItem("bread", cost: 5.00)
-        user.boughtItem("ppj", cost: 3.45)
+//        user.addWantedItem("Toilet Paper")
+//        user.addWantedItem("hello")
+//        user.addWantedItem("ToilePaper")
+//        user.addWantedItem("he")
+//        user.addWantedItem("Toilet Papr")
+//        user.addWantedItem("ello")
+//        user.addWantedItem("ilePaper")
+//        user.addWantedItem("e")
+//        user.addWantedItem("aper")
+//        user.addWantedItem("o")
+//        user.addWantedItem("lePaper")
+//        user.addWantedItem("dae")
+//        
+//        user.boughtItem("bread", cost: 5.00)
+//        user.boughtItem("ppj", cost: 3.45)
 
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -53,6 +53,7 @@ class HouseItemsTableViewController: UITableViewController {
         if (segue.identifier == "addHouseItemSegue") {
             let addItemVC = segue.destinationViewController as! AddHouseItemViewController;
             addItemVC.neededItem = neededItem
+            addItemVC.delegate = delegate
         }
     }
     
@@ -93,5 +94,4 @@ class HouseItemsTableViewController: UITableViewController {
             return houseObj.getPurchasedItems().count
         }
     }
-
 }

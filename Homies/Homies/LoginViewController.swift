@@ -80,11 +80,6 @@ class LoginViewController: UIViewController, LoginDelegate {
             vc3.delegate = self
             
         }
-//        if (segue.identifier == "DailyStats") {
-//            let nav = segue.destinationViewController as! UINavigationController
-//            let vc = nav.viewControllers.first as! DailyStatsViewController
-//            vc.delegate = self
-//        }
     }
 }
 
