@@ -17,8 +17,6 @@ class TasksTableViewController: UITableViewController {
     var house : House!
     var showWeek: Int!
     
-    
-    //eTaskName : String, eFrequency : Int, eCreatedDate : NSDate, eStartOffset : NSTimeInterval
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,14 +35,6 @@ class TasksTableViewController: UITableViewController {
         }
         
         house.checkResetMonthTasks()
-        
-//                user.addWantedItem("Toilet Paper")
-//                user.addWantedItem("hello")
-//                user.addWantedItem("ToilePaper")
-//                user.addWantedItem("he")
-//                user.boughtItem("bread", cost: 5.00)
-//                user.boughtItem("ppj", cost: 3.45)
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,60 +43,15 @@ class TasksTableViewController: UITableViewController {
     }
     
     @IBAction func changedTab(sender: AnyObject) {
-//        if tabController.selectedSegmentIndex == 0 {
-//            //update week table
-//        }
-//        if tabController.selectedSegmentIndex == 1 {
-//            //update month table
-//        }
         showWeek = tabController.selectedSegmentIndex
         self.tableView.reloadData()
     }
-    
-    //*********
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        neededItem = 0
-//        user = delegate?.getCurrentUser()
-//        houseObj = user.userHouse
-//        
-//        user.addWantedItem("Toilet Paper")
-//        user.addWantedItem("hello")
-//        user.addWantedItem("ToilePaper")
-//        user.addWantedItem("he")
-//        user.addWantedItem("Toilet Papr")
-//        user.addWantedItem("ello")
-//        user.addWantedItem("ilePaper")
-//        user.addWantedItem("e")
-//        user.addWantedItem("aper")
-//        user.addWantedItem("o")
-//        user.addWantedItem("lePaper")
-//        user.addWantedItem("dae")
-//        
-//        user.boughtItem("bread", cost: 5.00)
-//        user.boughtItem("ppj", cost: 3.45)
-//        
-//        // Do any additional setup after loading the view, typically from a nib.
-//    }
-//    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//    
-//    @IBAction func itemsTabChanged(sender: AnyObject) {
-//        neededItem = itemsTabController.selectedSegmentIndex
-//        self.tableView.reloadData()
-//        //        if itemsTabController.selectedSegmentIndex == 0 {
-//        //            house.getNeededItems()
-//        //        }
-//        //        if itemsTabController.selectedSegmentIndex == 1 {
-//        //            house.getPurchasedItems()
-//        //        }
-//    }
+
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = UITableViewCell(style:  UITableViewCellStyle.Value1, reuseIdentifier: "taskCell")
+        
         var curTask : Task!
         if (showWeek == 0) {
             curTask = house.getWeekTasks()[indexPath.row]
@@ -114,6 +59,13 @@ class TasksTableViewController: UITableViewController {
         } else {
             curTask = house.getMonthTasks()[indexPath.row]
         }
+
+        if (curTask.completed!) {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryType.None;
+        }
+
         cell.textLabel?.text = "\(curTask.taskName) - \(curTask.assignedUser.userName)"
         
         let formatter = NSDateFormatter()
@@ -130,9 +82,23 @@ class TasksTableViewController: UITableViewController {
             return house.getMonthTasks().count
         }
     }
-    //*********
     
-    
-
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let _ = user as? ExecutiveUser {
+            var curTask : Task!
+            if (showWeek == 0) {
+                curTask = house.getWeekTasks()[indexPath.row]
+                
+            } else {
+                curTask = house.getMonthTasks()[indexPath.row]
+            }
+            
+            if curTask.completed! {
+                curTask.undo()
+            } else {
+                curTask.complete()
+            }
+            tableView.reloadData()
+        }
+    }
 }

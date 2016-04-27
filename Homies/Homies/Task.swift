@@ -14,7 +14,6 @@ class Task : NSObject {
     var completed : Bool!
     var createdDate : NSDate!
     var deadline: NSDate!
-//    var startOffset: NSTimeInterval!
     var assignedUser: User!
 
     init(eTaskName : String, eFrequency : NSTimeInterval, eCreatedDate : NSDate, eDeadline : NSDate) {
@@ -24,11 +23,16 @@ class Task : NSObject {
         completed = false
         assignedUser = nil
         deadline = eDeadline
-        //startOffset = eStartOffset
     }
 
     func complete() {
         completed = true
+        assignedUser.increScore()
+    }
+    
+    func undo() {
+        completed = false
+        assignedUser.decScore()
     }
     
     func updateDeadline() {
@@ -39,13 +43,7 @@ class Task : NSObject {
         assignedUser = user
     }
     
-    //NSDate(timeInterval: frequency, sinceDate: deadline)
-    
     func copyTask() -> Task {
         return Task.init(eTaskName: taskName, eFrequency: frequency, eCreatedDate: createdDate, eDeadline : deadline)
     }
-
-//    func reset() {
-//        completed = false
-//    }
 }

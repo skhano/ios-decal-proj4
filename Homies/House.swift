@@ -71,6 +71,11 @@ class House: NSObject {
     func sortUsersScore() {
         users.sortInPlace({$0.score > $1.score})
     }
+    
+    func getSortedUsers() -> [User] {
+        sortUsersScore()
+        return users
+    }
 
     func getPurchasedItems() -> [String : Double] {
         var purchasedItems = [String : Double] ();
@@ -121,7 +126,6 @@ class House: NSObject {
         {
             updateTasks()
         }
-
     }
     
     func assignTasks() {

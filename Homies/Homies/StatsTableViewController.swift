@@ -29,12 +29,15 @@ class StatsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style:  UITableViewCellStyle.Value1, reuseIdentifier: "statCell")
-        cell.textLabel?.text = "afjkldsklfdsaklfkdlsf"
+        let curUser = house.getSortedUsers()[indexPath.row]
+        cell.textLabel?.text = curUser.userName
+        cell.detailTextLabel?.text = String(curUser.score)
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return house.getSortedUsers().count
     }
     
     
