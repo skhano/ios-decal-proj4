@@ -63,9 +63,22 @@ class LoginViewController: UIViewController, LoginDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "houseSegue") {
             let barViewControllers = segue.destinationViewController as! UITabBarController
-            let nav = barViewControllers.viewControllers![1] as! UINavigationController
-            let vc = nav.topViewController as! HouseItemsTableViewController
+            let nav = barViewControllers.viewControllers![0] as! UINavigationController
+            let vc = nav.topViewController as! TasksTableViewController
             vc.delegate = self
+            
+            let nav1 = barViewControllers.viewControllers![1] as! UINavigationController
+            let vc1 = nav1.topViewController as! HouseItemsTableViewController
+            vc1.delegate = self
+            
+            let nav2 = barViewControllers.viewControllers![2] as! UINavigationController
+            let vc2 = nav2.topViewController as! StatsTableViewController
+            vc2.delegate = self
+            
+            let nav3 = barViewControllers.viewControllers![3] as! UINavigationController
+            let vc3 = nav3.topViewController as! ProfileTableViewController
+            vc3.delegate = self
+            
         }
 //        if (segue.identifier == "DailyStats") {
 //            let nav = segue.destinationViewController as! UINavigationController
