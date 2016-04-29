@@ -37,6 +37,12 @@ class StatsTableViewController: UITableViewController {
         return 2
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "garbageSegue") {
+            let garbageVC = segue.destinationViewController as! GarbageViewController;
+            garbageVC.delegate = delegate
+        }
+    }
     
     
 }

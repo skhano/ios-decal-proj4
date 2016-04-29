@@ -14,6 +14,7 @@
 		645896281CC7308900458AED /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645896271CC7308900458AED /* TasksTableViewController.swift */; };
 		6458962A1CC7332A00458AED /* HouseItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645896291CC7332A00458AED /* HouseItemsTableViewController.swift */; };
 		6458962C1CC743D400458AED /* AddHouseItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458962B1CC743D400458AED /* AddHouseItemViewController.swift */; };
+		6487890C1CD0923E00C43B5F /* garbageBin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6487890B1CD0923E00C43B5F /* garbageBin.gif */; };
 		64DEA0DC1CC5C87400787C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA0DB1CC5C87400787C84 /* AppDelegate.swift */; };
 		64DEA0DE1CC5C87400787C84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA0DD1CC5C87400787C84 /* LoginViewController.swift */; };
 		64DEA0E11CC5C87400787C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DEA0DF1CC5C87400787C84 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		645896271CC7308900458AED /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		645896291CC7332A00458AED /* HouseItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseItemsTableViewController.swift; sourceTree = "<group>"; };
 		6458962B1CC743D400458AED /* AddHouseItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouseItemViewController.swift; sourceTree = "<group>"; };
+		6487890B1CD0923E00C43B5F /* garbageBin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = garbageBin.gif; path = Homies/garbageBin.gif; sourceTree = "<group>"; };
 		64DEA0D81CC5C87400787C84 /* Homies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DEA0DB1CC5C87400787C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64DEA0DD1CC5C87400787C84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		64DEA0CF1CC5C87400787C84 = {
 			isa = PBXGroup;
 			children = (
+				6487890B1CD0923E00C43B5F /* garbageBin.gif */,
 				64DEA0DA1CC5C87400787C84 /* Homies */,
 				64DEA0D91CC5C87400787C84 /* Products */,
 			);
@@ -161,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6487890C1CD0923E00C43B5F /* garbageBin.gif in Resources */,
 				64DEA0E61CC5C87400787C84 /* LaunchScreen.storyboard in Resources */,
 				64DEA0E31CC5C87400787C84 /* Assets.xcassets in Resources */,
 				64DEA0E11CC5C87400787C84 /* Main.storyboard in Resources */,

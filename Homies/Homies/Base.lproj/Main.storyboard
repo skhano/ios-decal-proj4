@@ -445,7 +445,7 @@
                     <navigationItem key="navigationItem" title="Stats Page" id="LAN-3h-YyC">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="p3M-VX-rv7">
                             <connections>
-                                <segue destination="58e-Tp-Sso" kind="show" id="3N5-Zp-xgZ"/>
+                                <segue destination="58e-Tp-Sso" kind="show" identifier="garbageSegue" id="3N5-Zp-xgZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -455,10 +455,10 @@
             </objects>
             <point key="canvasLocation" x="4095" y="1433"/>
         </scene>
-        <!--View Controller-->
+        <!--Garbage View Controller-->
         <scene sceneID="Pg1-YJ-FAN">
             <objects>
-                <viewController id="58e-Tp-Sso" sceneMemberID="viewController">
+                <viewController id="58e-Tp-Sso" customClass="GarbageViewController" customModule="Homies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IoZ-ei-Kme"/>
                         <viewControllerLayoutGuide type="bottom" id="vHc-Eb-cmn"/>
@@ -467,18 +467,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lc4-bl-MIl">
-                                <rect key="frame" x="180" y="191" width="240" height="219"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garbageBin.gif" translatesAutoresizingMaskIntoConstraints="NO" id="lc4-bl-MIl">
+                                <rect key="frame" x="206" y="164" width="189" height="304"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="gT4-1F-qmR"/>
+                                    <constraint firstAttribute="height" constant="304" id="nZ4-gR-48d"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOSER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ban-Yb-42S">
-                                <rect key="frame" x="203" y="456" width="194" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loser of the Week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqz-aZ-o41">
+                                <rect key="frame" x="180" y="64" width="240" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="3wo-Sk-LiL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.18952716780000001" green="0.084045296280000001" blue="0.66032608699999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOSER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ban-Yb-42S">
+                                <rect key="frame" x="199" y="366" width="203" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="fhO-go-dzi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="62"/>
+                                <color key="textColor" red="0.9111587389380531" green="0.14271882609491221" blue="0.12549092142615328" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ban-Yb-42S" firstAttribute="centerX" secondItem="FAn-li-zmu" secondAttribute="centerX" id="6iM-PF-Sak"/>
+                            <constraint firstItem="mqz-aZ-o41" firstAttribute="centerX" secondItem="lc4-bl-MIl" secondAttribute="centerX" id="75J-Np-XtW"/>
+                            <constraint firstItem="vHc-Eb-cmn" firstAttribute="top" secondItem="lc4-bl-MIl" secondAttribute="bottom" constant="83" id="7AX-HQ-et9"/>
+                            <constraint firstItem="mqz-aZ-o41" firstAttribute="top" secondItem="IoZ-ei-Kme" secondAttribute="bottom" id="BZW-Gx-o93"/>
+                            <constraint firstItem="vHc-Eb-cmn" firstAttribute="top" secondItem="Ban-Yb-42S" secondAttribute="bottom" constant="113" id="Iax-ac-tEW"/>
+                            <constraint firstItem="lc4-bl-MIl" firstAttribute="top" secondItem="mqz-aZ-o41" secondAttribute="bottom" constant="56" id="Ufl-8a-hB8"/>
+                            <constraint firstItem="lc4-bl-MIl" firstAttribute="centerX" secondItem="FAn-li-zmu" secondAttribute="centerX" id="yrR-85-SnH"/>
+                        </constraints>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="loserNameLabel" destination="Ban-Yb-42S" id="bBc-GB-f5I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uf-rt-HFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -738,4 +767,7 @@
             <point key="canvasLocation" x="3282" y="2252"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="garbageBin.gif" width="215" height="400"/>
+    </resources>
 </document>
