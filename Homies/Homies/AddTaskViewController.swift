@@ -33,6 +33,10 @@ class AddTaskViewController: UIViewController {
             delegate?.getCurrentUser().userHouse.addTask(Task.init(eTaskName: taskText.text!, eFrequency:
             (repeatInDays.text! as NSString).doubleValue*24*3600, eCreatedDate: NSDate(),
             eDeadline: NSDate(timeIntervalSinceNow: NSTimeInterval((deadlineInDays.text! as NSString).doubleValue)*24*3600)))
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Error: Sorry only the executive can add tasks.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
