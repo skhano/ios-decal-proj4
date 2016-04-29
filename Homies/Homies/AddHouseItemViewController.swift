@@ -35,6 +35,7 @@ class AddHouseItemViewController: UIViewController {
         if (neededItem == 0) {
             delegate?.getCurrentUser().addWantedItem(enteredItem.text!)
         } else {
+            
             delegate?.getCurrentUser().boughtItem(enteredItem.text!, cost: (price.text! as NSString).doubleValue)
         }
 //        defaults.setObject(delegate?.getCurrentUser(), forKey: (delegate?.getCurrentUser().userName)!)

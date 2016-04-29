@@ -61,13 +61,14 @@ class TasksTableViewController: UITableViewController {
         }
 
         if (curTask.completed!) {
+            cell.tintColor = UIColor.grayColor()
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.None;
         }
 
         cell.textLabel?.text = "\(curTask.taskName) - \(curTask.assignedUser.userName)"
-        
+        cell.backgroundColor = curTask.assignedUser.userColor
         let formatter = NSDateFormatter()
         formatter.dateStyle = .ShortStyle
 

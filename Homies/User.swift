@@ -12,6 +12,7 @@ class User : NSObject {
     var userName : String!
     var userPassword : String!
     var userHouse : House!
+    var userColor : UIColor!
     
     var score : Int!
     var tasks : [Task]!
@@ -27,7 +28,7 @@ class User : NSObject {
         moneySpent = 0.0
     }
     
-    init(enteredName : String, enteredPassword : String, enteredHouse : House) {
+    init(enteredName : String, enteredPassword : String, enteredHouse : House, enteredColor : UIColor) {
         score = 0
         tasks = []
         tasksCompleted = []
@@ -36,6 +37,7 @@ class User : NSObject {
         userName = enteredName
         userPassword = enteredPassword
         userHouse = enteredHouse
+        userColor = enteredColor
     }
     
     func boughtItem(item : String, cost : Double) {

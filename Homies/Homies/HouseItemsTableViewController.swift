@@ -75,6 +75,7 @@ class HouseItemsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style:  UITableViewCellStyle.Value1, reuseIdentifier: "houseHoldItemCell")
+        cell.backgroundColor = user.userColor
         if (neededItem == 0) {
             cell.textLabel?.text = "\(houseObj.getNeededItems()[indexPath.row]) - \(user.userName)"
             cell.detailTextLabel?.text = ""

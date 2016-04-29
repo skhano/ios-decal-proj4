@@ -35,6 +35,7 @@ class StatsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style:  UITableViewCellStyle.Value1, reuseIdentifier: "statCell")
         let curUser = house.getSortedUsers()[indexPath.row]
+        cell.backgroundColor = curUser.userColor
         cell.textLabel?.text = curUser.userName
         cell.detailTextLabel?.text = String(curUser.score)
         

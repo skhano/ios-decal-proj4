@@ -42,6 +42,7 @@ class ProfileTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style:  UITableViewCellStyle.Value1, reuseIdentifier: "profileCell")
+        cell.backgroundColor = user.userColor
         if (tab == 0) {
             let currTask = userTasksCompleted[indexPath.row]
             cell.textLabel?.text = "\(currTask.taskName)"
