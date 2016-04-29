@@ -54,6 +54,10 @@ class HouseItemsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToHouseItemsTableViewController(segue: UIStoryboardSegue) {
+        
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "addHouseItemSegue") {
             let addItemVC = segue.destinationViewController as! AddHouseItemViewController;

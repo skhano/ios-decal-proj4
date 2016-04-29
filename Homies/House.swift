@@ -61,6 +61,7 @@ class House: NSObject {
     
     func addTask(task: Task) {
         tasks.append(task)
+        updateTasks()
     }
 
     func getLoserName() -> String {
@@ -102,7 +103,6 @@ class House: NSObject {
     }
     
     func updateTasks() {
-        monthTasks.removeAll()
         let oneMonthLaterDate = NSDate(timeIntervalSinceNow: 30*24*3600)
         for task in tasks {
             var dateComparisionResult = oneMonthLaterDate.compare(task.deadline)

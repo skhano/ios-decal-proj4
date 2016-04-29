@@ -16,6 +16,7 @@ class TasksTableViewController: UITableViewController {
     var user : User!
     var house : House!
     var showWeek: Int!
+    var tasks : [Task]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class TasksTableViewController: UITableViewController {
         house = user.userHouse
         showWeek = 0
         
-        let tasks = [Task.init(eTaskName: "Clean floor", eFrequency: 24*3600 * 5, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 0)),
+        tasks = [Task.init(eTaskName: "Clean floor", eFrequency: 24*3600 * 5, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 0)),
             Task.init(eTaskName: "Trash", eFrequency: 24*3600 * 10, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 5 * 24 * 3600)),
             Task.init(eTaskName: "Table", eFrequency: 24*3600 * 15, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 10 * 24 * 3600)),
             Task.init(eTaskName: "Chair", eFrequency: 24*3600 * 25, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 15 * 24 * 3600)),
@@ -42,11 +43,23 @@ class TasksTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToDoTableViewController(segue: UIStoryboardSegue) {
+    }
+    
     @IBAction func changedTab(sender: AnyObject) {
         showWeek = tabController.selectedSegmentIndex
         self.tableView.reloadData()
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    
+        if let _ = user as? ExecutiveUser {
+            if (segue.identifier == "addTaskSegue") {
+                let addTaskVC = segue.destinationViewController as! AddTaskViewController;
+                addTaskVC.delegate = delegate
+            }
+        }
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
