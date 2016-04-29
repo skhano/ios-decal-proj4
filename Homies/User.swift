@@ -94,4 +94,12 @@ class User : NSObject {
         clearScore()
         clearMoneySpent()
     }
+    
+    func increScore() {
+        score = score + 2
+    }
+    
+    func decScore() {
+        score = score - 2
+    }
 }
