@@ -11,6 +11,12 @@
 		6408CEEA1CCD7C5100DA1B8C /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408CEE91CCD7C5100DA1B8C /* GarbageViewController.swift */; };
 		6408CEEC1CCD7C5800DA1B8C /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408CEEB1CCD7C5800DA1B8C /* ProfileTableViewController.swift */; };
 		6408CEEE1CCD7C5D00DA1B8C /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408CEED1CCD7C5D00DA1B8C /* StatsTableViewController.swift */; };
+		643D4A2E1CD403C600C35947 /* items.png in Resources */ = {isa = PBXBuildFile; fileRef = 643D4A2D1CD403C600C35947 /* items.png */; };
+		643D4A301CD403CC00C35947 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 643D4A2F1CD403CC00C35947 /* profile.png */; };
+		643D4A321CD403D100C35947 /* scorechart.png in Resources */ = {isa = PBXBuildFile; fileRef = 643D4A311CD403D100C35947 /* scorechart.png */; };
+		643D4A341CD403D600C35947 /* tasks.png in Resources */ = {isa = PBXBuildFile; fileRef = 643D4A331CD403D600C35947 /* tasks.png */; };
+		643D4A361CD4041B00C35947 /* houseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 643D4A351CD4041B00C35947 /* houseIcon.png */; };
+		643D4A381CD4042200C35947 /* houseIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 643D4A371CD4042200C35947 /* houseIcon1.png */; };
 		645896281CC7308900458AED /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645896271CC7308900458AED /* TasksTableViewController.swift */; };
 		6458962A1CC7332A00458AED /* HouseItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645896291CC7332A00458AED /* HouseItemsTableViewController.swift */; };
 		6458962C1CC743D400458AED /* AddHouseItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458962B1CC743D400458AED /* AddHouseItemViewController.swift */; };
@@ -33,6 +39,12 @@
 		6408CEE91CCD7C5100DA1B8C /* GarbageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
 		6408CEEB1CCD7C5800DA1B8C /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		6408CEED1CCD7C5D00DA1B8C /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
+		643D4A2D1CD403C600C35947 /* items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = items.png; path = "../../../../../Library/Messages/Attachments/20/00/C7EE84E4-9BB7-49E1-A479-762838AE9549/tab-image/items.png"; sourceTree = "<group>"; };
+		643D4A2F1CD403CC00C35947 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = "../../../../../Library/Messages/Attachments/20/00/C7EE84E4-9BB7-49E1-A479-762838AE9549/tab-image/profile.png"; sourceTree = "<group>"; };
+		643D4A311CD403D100C35947 /* scorechart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scorechart.png; path = "../../../../../Library/Messages/Attachments/20/00/C7EE84E4-9BB7-49E1-A479-762838AE9549/tab-image/scorechart.png"; sourceTree = "<group>"; };
+		643D4A331CD403D600C35947 /* tasks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tasks.png; path = "../../../../../Library/Messages/Attachments/20/00/C7EE84E4-9BB7-49E1-A479-762838AE9549/tab-image/tasks.png"; sourceTree = "<group>"; };
+		643D4A351CD4041B00C35947 /* houseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = houseIcon.png; path = ../../../../../Downloads/houseIcon.png; sourceTree = "<group>"; };
+		643D4A371CD4042200C35947 /* houseIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = houseIcon1.png; path = ../../../../../Downloads/houseIcon1.png; sourceTree = "<group>"; };
 		645896271CC7308900458AED /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		645896291CC7332A00458AED /* HouseItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseItemsTableViewController.swift; sourceTree = "<group>"; };
 		6458962B1CC743D400458AED /* AddHouseItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouseItemViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +79,12 @@
 			isa = PBXGroup;
 			children = (
 				6487890B1CD0923E00C43B5F /* garbageBin.gif */,
+				643D4A2D1CD403C600C35947 /* items.png */,
+				643D4A2F1CD403CC00C35947 /* profile.png */,
+				643D4A311CD403D100C35947 /* scorechart.png */,
+				643D4A331CD403D600C35947 /* tasks.png */,
+				643D4A351CD4041B00C35947 /* houseIcon.png */,
+				643D4A371CD4042200C35947 /* houseIcon1.png */,
 				64DEA0DA1CC5C87400787C84 /* Homies */,
 				64DEA0D91CC5C87400787C84 /* Products */,
 			);
@@ -165,8 +183,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6487890C1CD0923E00C43B5F /* garbageBin.gif in Resources */,
+				643D4A301CD403CC00C35947 /* profile.png in Resources */,
+				643D4A341CD403D600C35947 /* tasks.png in Resources */,
+				643D4A2E1CD403C600C35947 /* items.png in Resources */,
 				64DEA0E61CC5C87400787C84 /* LaunchScreen.storyboard in Resources */,
+				643D4A381CD4042200C35947 /* houseIcon1.png in Resources */,
 				64DEA0E31CC5C87400787C84 /* Assets.xcassets in Resources */,
+				643D4A321CD403D100C35947 /* scorechart.png in Resources */,
+				643D4A361CD4041B00C35947 /* houseIcon.png in Resources */,
 				64DEA0E11CC5C87400787C84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -787,7 +787,7 @@
         <scene sceneID="L4z-E6-5DS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8oe-9u-Ytv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tasks" id="1o7-4R-FlJ"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="tasks.png" id="1o7-4R-FlJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e9W-Xp-dnp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -806,7 +806,7 @@
         <scene sceneID="WQq-BK-xUI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQw-xO-rhU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="House Items" id="EAO-W0-oS2"/>
+                    <tabBarItem key="tabBarItem" title="House Items" image="items.png" id="EAO-W0-oS2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MKM-4q-LGV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -825,7 +825,7 @@
         <scene sceneID="sQZ-l8-pOm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gzc-XB-Gw1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Score Chart" id="zR7-2U-ZSO"/>
+                    <tabBarItem key="tabBarItem" title="Score Chart" image="scorechart.png" id="zR7-2U-ZSO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Rc-j6-J33">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -890,7 +890,7 @@
         <scene sceneID="QYh-VW-yw1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uiU-Oa-BJc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Your Profile" id="xDL-DU-JuL"/>
+                    <tabBarItem key="tabBarItem" title="Your Profile" image="profile.png" id="xDL-DU-JuL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9fB-wI-pSs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -908,5 +908,9 @@
     </scenes>
     <resources>
         <image name="garbageBin.gif" width="215" height="400"/>
+        <image name="items.png" width="32" height="32"/>
+        <image name="profile.png" width="32" height="32"/>
+        <image name="scorechart.png" width="32" height="32"/>
+        <image name="tasks.png" width="32" height="32"/>
     </resources>
 </document>
