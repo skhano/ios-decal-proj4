@@ -13,6 +13,7 @@ class Task : NSObject {
     var frequency : NSTimeInterval!
     var completed : Bool!
     var createdDate : NSDate!
+    var completedDate : NSDate!
     var deadline: NSDate!
     var assignedUser: User!
 
@@ -20,6 +21,7 @@ class Task : NSObject {
         taskName = eTaskName
         frequency = eFrequency
         createdDate = eCreatedDate
+        completedDate = nil
         completed = false
         assignedUser = nil
         deadline = eDeadline
@@ -28,11 +30,14 @@ class Task : NSObject {
     func complete() {
         completed = true
         assignedUser.increScore()
+        assignedUser.addCompletedTask(self)
+        completedDate = NSDate()
     }
     
     func undo() {
         completed = false
         assignedUser.decScore()
+        //assignedUser.removeCompletedTask(self)
     }
     
     func updateDeadline() {

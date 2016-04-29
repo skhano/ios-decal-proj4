@@ -254,7 +254,7 @@
                     <navigationItem key="navigationItem" id="dF2-1M-RvI">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="ThV-mS-SlQ">
-                            <rect key="frame" x="20" y="7" width="560" height="30"/>
+                            <rect key="frame" x="149" y="7" width="302" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Week"/>
@@ -299,7 +299,7 @@
                     <navigationItem key="navigationItem" id="noo-36-l9S">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Tu3-KJ-nhx">
-                            <rect key="frame" x="20" y="7" width="526" height="30"/>
+                            <rect key="frame" x="151" y="7" width="298" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Needed Items"/>
@@ -718,7 +718,7 @@
             </objects>
             <point key="canvasLocation" x="3283" y="1433"/>
         </scene>
-        <!--Your Profile-->
+        <!--Profile Table View Controller-->
         <scene sceneID="eTx-nt-otL">
             <objects>
                 <tableViewController id="VB2-JK-fQh" customClass="ProfileTableViewController" customModule="Homies" customModuleProvider="target" sceneMemberID="viewController">
@@ -741,7 +741,23 @@
                             <outlet property="delegate" destination="VB2-JK-fQh" id="52i-nh-G6F"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Profile" id="KcJ-Ql-VOY"/>
+                    <navigationItem key="navigationItem" id="KcJ-Ql-VOY">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="hqu-n0-E0W">
+                            <rect key="frame" x="164" y="7" width="272" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Completed"/>
+                                <segment title="Items Bought"/>
+                            </segments>
+                            <connections>
+                                <action selector="tabController:" destination="VB2-JK-fQh" eventType="valueChanged" id="MSw-Mn-EhQ"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileTabController" destination="hqu-n0-E0W" id="Ojs-w0-MqW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kct-68-c7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

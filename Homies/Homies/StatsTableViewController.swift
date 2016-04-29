@@ -22,6 +22,11 @@ class StatsTableViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+        super.viewWillAppear(false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

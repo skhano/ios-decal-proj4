@@ -17,10 +17,12 @@ class User : NSObject {
     var tasks : [Task]!
     var itemsBought : [String : Double]
     var moneySpent : Double!
+    var tasksCompleted : [Task]!
     
     override init () {
         score = 0
         tasks = []
+        tasksCompleted = []
         itemsBought = [String : Double]()
         moneySpent = 0.0
     }
@@ -28,6 +30,7 @@ class User : NSObject {
     init(enteredName : String, enteredPassword : String, enteredHouse : House) {
         score = 0
         tasks = []
+        tasksCompleted = []
         itemsBought = [String : Double]()
         moneySpent = 0.0
         userName = enteredName
@@ -49,7 +52,7 @@ class User : NSObject {
         }
         itemsBought[item] = cost
         moneySpent = moneySpent + cost
-        score = score + 1
+        score = score + Int(cost/4)
     }
     
     func calMoneySpent() -> Double {
@@ -70,6 +73,10 @@ class User : NSObject {
     
     func addTask(newTask: Task) {
         tasks.append(newTask)
+    }
+    
+    func addCompletedTask(completed : Task) {
+        tasksCompleted.append(completed)
     }
     
     func clearTasks() {
