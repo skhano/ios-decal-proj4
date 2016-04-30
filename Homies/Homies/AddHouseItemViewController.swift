@@ -40,7 +40,7 @@ class AddHouseItemViewController: UIViewController {
         if (neededItem == 0) {
             user!.addWantedItem(enteredItem.text!)
         } else {
-            user!.boughtItem("\(enteredItem.text!) - \(user?.userName)", cost: (price.text! as NSString).doubleValue)
+            user!.boughtItem("\(enteredItem.text!) - \(user!.userName)", cost: (price.text! as NSString).doubleValue)
         }
 //        defaults.setObject(delegate?.getCurrentUser(), forKey: (delegate?.getCurrentUser().userName)!)
     }
