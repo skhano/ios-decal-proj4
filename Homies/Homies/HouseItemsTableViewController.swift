@@ -25,6 +25,18 @@ class HouseItemsTableViewController: UITableViewController {
         user = delegate?.getCurrentUser()
         houseObj = user.userHouse
         
+        houseObj.users[0].addWantedItem("Toilet Paper")
+        houseObj.users[0].addWantedItem("Salt")
+        houseObj.users[1].addWantedItem("Vacuum Cleaner")
+        houseObj.users[2].addWantedItem("Cooking Oil")
+        houseObj.users[3].addWantedItem("Detergent")
+        houseObj.users[3].addWantedItem("Pepper")
+        houseObj.users[3].addWantedItem("soap")
+        
+        houseObj.users[1].boughtItem("bread", cost: 5.00)
+        houseObj.users[4].boughtItem("ppj", cost: 3.45)
+        
+        
 //        user.addWantedItem("Toilet Paper")
 //        user.addWantedItem("hello")
 //        user.addWantedItem("ToilePaper")
@@ -79,11 +91,13 @@ class HouseItemsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style:  UITableViewCellStyle.Value1, reuseIdentifier: "houseHoldItemCell")
-        cell.backgroundColor = user.userColor
+        cell.textLabel?.textColor = themeColor.navy
         if (neededItem == 0) {
-            cell.textLabel?.text = "\(houseObj.getNeededItems()[indexPath.row]) - \(user.userName)"
+            cell.backgroundColor = user.userColor
+            cell.textLabel?.text = "\(houseObj.getNeededItems()[indexPath.row])"
             cell.detailTextLabel?.text = ""
         } else {
+            cell.backgroundColor = user.userColor
             let keys = [String] (houseObj.getPurchasedItems().keys)
             let vals = [Double] (houseObj.getPurchasedItems().values)
             if (indexPath.row >= keys.count) {
@@ -91,7 +105,7 @@ class HouseItemsTableViewController: UITableViewController {
             }
             let item = keys[indexPath.row]
             let price = vals[indexPath.row]
-            cell.textLabel?.text = "\(item) - \(user.userName)"
+            cell.textLabel?.text = "\(item)"
             cell.detailTextLabel?.text = "$\(price)"
         }
         return cell
