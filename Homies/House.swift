@@ -44,6 +44,7 @@ class House: NSObject {
     var houseName : String!
     var exec : ExecutiveUser!
     var users : [User]!
+    var originalUsers : [User]!
     var neededItems : [String]!
     var createdDate : NSDate!
     var tasks :[Task]!
@@ -54,6 +55,7 @@ class House: NSObject {
         houseName = eHouseName
         neededItems = []
         users = []
+        originalUsers = []
         createdDate = eCreatedDate
         tasks = []
         monthTasks = []
@@ -62,6 +64,7 @@ class House: NSObject {
     
     func addUser(user : User) {
         users.append(user)
+        originalUsers.append(user)
         if let houseUser = user as? ExecutiveUser {
             exec = houseUser
         }

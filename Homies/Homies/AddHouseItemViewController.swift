@@ -36,11 +36,11 @@ class AddHouseItemViewController: UIViewController {
     }
     
     @IBAction func saveButton(sender: AnyObject) {
+        let user = delegate?.getCurrentUser()
         if (neededItem == 0) {
-            delegate?.getCurrentUser().addWantedItem(enteredItem.text!)
+            user!.addWantedItem(enteredItem.text!)
         } else {
-            
-            delegate?.getCurrentUser().boughtItem(enteredItem.text!, cost: (price.text! as NSString).doubleValue)
+            user!.boughtItem("\(enteredItem.text!) - \(user?.userName)", cost: (price.text! as NSString).doubleValue)
         }
 //        defaults.setObject(delegate?.getCurrentUser(), forKey: (delegate?.getCurrentUser().userName)!)
     }

@@ -33,8 +33,8 @@ class HouseItemsTableViewController: UITableViewController {
         houseObj.users[3].addWantedItem("Pepper")
         houseObj.users[3].addWantedItem("soap")
         
-        houseObj.users[1].boughtItem("bread", cost: 5.00)
-        houseObj.users[4].boughtItem("ppj", cost: 3.45)
+        houseObj.originalUsers[1].boughtItem("bread - sam", cost: 5.00)
+        houseObj.originalUsers[4].boughtItem("pbj - bob", cost: 3.45)
         
         
 //        user.addWantedItem("Toilet Paper")
