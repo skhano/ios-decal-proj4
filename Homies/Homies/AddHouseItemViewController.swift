@@ -14,7 +14,7 @@ class AddHouseItemViewController: UIViewController {
     var delegate : LoginDelegate?
     
     @IBOutlet weak var enteredItem: UITextField!
-    @IBOutlet weak var priceLabel: UILabel!
+   // @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var price: UITextField!
     
     //var defaults : NSUserDefaults!
@@ -22,9 +22,13 @@ class AddHouseItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if (neededItem == 0) {
-            priceLabel.text = ""
+      //      priceLabel.text = ""
+            price.placeholder = ""
+            price.borderStyle = UITextBorderStyle.None
         } else {
-            priceLabel.text = "Enter Price"
+      //      priceLabel.text = "Enter Price"
+            price.placeholder = "Enter Price"
+            price.borderStyle = UITextBorderStyle.RoundedRect
         }
 //        defaults = NSUserDefaults.standardUserDefaults()
 //        defaults.setObject((delegate?.getCurrentUser().userName)!)

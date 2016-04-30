@@ -25,9 +25,18 @@ extension MutableCollectionType where Index == Int {
         
         for i in 0..<count - 1 {
             let j = Int(arc4random_uniform(UInt32(count - i))) + i
-            guard i != j else { continue }
+            guard i != j else {
+                print("continue: ")
+                continue
+            }
             swap(&self[i], &self[j])
+            print("swapped list: ")
+            for item in self{
+                let curUser = item as? User
+                print(curUser!.userName)
+            }
         }
+        
     }
 }
 
@@ -49,7 +58,6 @@ class House: NSObject {
         tasks = []
         monthTasks = []
         updatedTasksDate = NSDate(timeIntervalSinceNow: -30*24*3600)
-        //updatedTasksDate = eCreatedDate.copy() as! NSDate
     }
     
     func addUser(user : User) {
@@ -93,7 +101,11 @@ class House: NSObject {
     }
     
     func shuffleUsers() {
-        users.shuffle()
+        users = users.shuffle()
+        print("shuffle: ")
+        for user in users{
+            print(user.userName)
+        }
     }
     
     func clearUsersTasks() {
@@ -145,9 +157,6 @@ class House: NSObject {
     }
     
     func getMonthTasks() -> [Task] {
-        for task in monthTasks {
-            print(task.taskName)
-        }
         return monthTasks
     }
     

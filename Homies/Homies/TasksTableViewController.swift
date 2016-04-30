@@ -25,11 +25,13 @@ class TasksTableViewController: UITableViewController {
         house = user.userHouse
         showWeek = 0
         
-        tasks = [Task.init(eTaskName: "Clean floor", eFrequency: 24*3600 * 5, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 0)),
-            Task.init(eTaskName: "Trash", eFrequency: 24*3600 * 10, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 5 * 24 * 3600)),
-            Task.init(eTaskName: "Table", eFrequency: 24*3600 * 15, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 10 * 24 * 3600)),
-            Task.init(eTaskName: "Chair", eFrequency: 24*3600 * 25, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 15 * 24 * 3600)),
-            Task.init(eTaskName: "Toilet", eFrequency: 24*3600 * 30, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 20 * 24 * 3600))]
+        tasks = [Task.init(eTaskName: "Clean floor", eFrequency: 24*3600 * 3, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 3)),
+            Task.init(eTaskName: "Take out trash", eFrequency: 24*3600 * 4, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 1 * 24 * 3600)),
+            Task.init(eTaskName: "Collect rent", eFrequency: 24*3600 * 4, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 6 * 24 * 3600)),
+            Task.init(eTaskName: "Organize storage", eFrequency: 24*3600 * 5, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 8 * 24 * 3600)),
+            Task.init(eTaskName: "clean fridge", eFrequency: 24*3600 * 6, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 8 * 24 * 3600)),
+            Task.init(eTaskName: "Wash dishes", eFrequency: 24*3600 * 6, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 8 * 24 * 3600)),
+            Task.init(eTaskName: "Clean toilet", eFrequency: 24*3600 * 30, eCreatedDate: NSDate(), eDeadline: NSDate(timeIntervalSinceNow: 7 * 24 * 3600))]
         
         for task in tasks {
             house.addTask(task)
@@ -64,6 +66,8 @@ class TasksTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style:  UITableViewCellStyle.Value1, reuseIdentifier: "taskCell")
+        
+        cell.textLabel?.textColor = themeColor.navy
         
         var curTask : Task!
         if (showWeek == 0) {

@@ -32,6 +32,8 @@
 		64DEA0F61CC5DCF100787C84 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA0F51CC5DCF100787C84 /* House.swift */; };
 		64DEA0F81CC5DD1C00787C84 /* ExecutiveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA0F71CC5DD1C00787C84 /* ExecutiveUser.swift */; };
 		64DEA0FA1CC5DD9100787C84 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA0F91CC5DD9100787C84 /* Task.swift */; };
+		A6691BD31CD4566000AF8677 /* themeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6691BD21CD4566000AF8677 /* themeColor.swift */; };
+		A6691BD71CD4709F00AF8677 /* icon-transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = A6691BD61CD4709F00AF8677 /* icon-transparent.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		64DEA0F51CC5DCF100787C84 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = House.swift; path = ../House.swift; sourceTree = "<group>"; };
 		64DEA0F71CC5DD1C00787C84 /* ExecutiveUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExecutiveUser.swift; path = ../ExecutiveUser.swift; sourceTree = "<group>"; };
 		64DEA0F91CC5DD9100787C84 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A6691BD21CD4566000AF8677 /* themeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = themeColor.swift; sourceTree = "<group>"; };
+		A6691BD61CD4709F00AF8677 /* icon-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-transparent.png"; path = "Homies/icon/icon-transparent.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		64DEA0CF1CC5C87400787C84 = {
 			isa = PBXGroup;
 			children = (
+				A6691BD61CD4709F00AF8677 /* icon-transparent.png */,
 				6487890B1CD0923E00C43B5F /* garbageBin.gif */,
 				643D4A391CD409F100C35947 /* items.png */,
 				643D4A3F1CD40A1000C35947 /* scorechart.png */,
@@ -116,6 +121,7 @@
 				6408CEED1CCD7C5D00DA1B8C /* StatsTableViewController.swift */,
 				6408CEEB1CCD7C5800DA1B8C /* ProfileTableViewController.swift */,
 				6408CEE91CCD7C5100DA1B8C /* GarbageViewController.swift */,
+				A6691BD21CD4566000AF8677 /* themeColor.swift */,
 				64DEA0DF1CC5C87400787C84 /* Main.storyboard */,
 				64DEA0E21CC5C87400787C84 /* Assets.xcassets */,
 				64DEA0E41CC5C87400787C84 /* LaunchScreen.storyboard */,
@@ -192,6 +198,7 @@
 				643D4A421CD40A1D00C35947 /* tasks.png in Resources */,
 				643D4A461CD40A5C00C35947 /* houseIcon.png in Resources */,
 				643D4A441CD40A4800C35947 /* profile.png in Resources */,
+				A6691BD71CD4709F00AF8677 /* icon-transparent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +222,7 @@
 				6458962C1CC743D400458AED /* AddHouseItemViewController.swift in Sources */,
 				64DEA0F61CC5DCF100787C84 /* House.swift in Sources */,
 				64DEA0DC1CC5C87400787C84 /* AppDelegate.swift in Sources */,
+				A6691BD31CD4566000AF8677 /* themeColor.swift in Sources */,
 				6408CEE81CCD7C4900DA1B8C /* AddTaskViewController.swift in Sources */,
 				6408CEEE1CCD7C5D00DA1B8C /* StatsTableViewController.swift in Sources */,
 			);
@@ -328,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Homies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samkhano.Homies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Homies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samkhano.Homies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
