@@ -43,9 +43,6 @@
                                 <state key="normal" title="Register User">
                                     <color key="titleColor" red="0.83137254900000002" green="0.84705882349999995" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="OcV-oA-SV4" kind="show" id="CCp-qm-7XW"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-fU-mqf">
                                 <rect key="frame" x="257" y="475" width="219" height="30"/>
@@ -57,9 +54,6 @@
                                 <state key="normal" title="Register House">
                                     <color key="titleColor" red="0.83137254901960789" green="0.84705882352941175" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="CbW-1q-2u0" kind="show" id="6dq-cm-Dcw"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Passward" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaa-f6-RjU">
                                 <rect key="frame" x="20" y="285" width="560" height="60"/>
